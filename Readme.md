@@ -1,6 +1,6 @@
 # AWS learning
 [reference aws cli](https://awscli.amazonaws.com/v2/documentation/api/latest/index.html)
-
+[querying reference](https://docs.aws.amazon.com/cli/v1/userguide/cli-usage-filter.html#cli-usage-filter-resources)
 ## ch1 - gitpod
 
 gp init = initiating startup config yaml for gitpod
