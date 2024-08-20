@@ -29,3 +29,4 @@ aws s3 rb s3bucketuri => removing bucket **bucket need to be empty to delete
 aws s3api create-bucket --bucket bucket-name --region bucket-region => creating bucket in specific region
 aws s3api list-buckets ==> listing
 aws s3api list-buckets --query Buckets[].Name => query in s3
+aws s3api list-buckets --query "Buckets[?Name== 'aws-example-llo']"
