@@ -39,3 +39,4 @@ aws s3api commands
 - aws s3api list-buckets --query "Buckets[?Name== 'aws-example-llo']"
 - get-object => aws s3api get-object --bucket text-content --key dir/my_images.tar.bz2 my_images.tar.bz2
 - put-object =>aws s3api put-object --bucket text-content --key dir-1/my_images.tar.bz2 --body my_images.tar.bz2
+- list-objects => aws s3api list-objects --bucket aws-example-llo --prefix image/ --query Contents[].key
