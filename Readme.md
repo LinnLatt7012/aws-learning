@@ -20,15 +20,16 @@ https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html
 
 aws sts get-caller-identity => checking current identity
 
-# ch2  - S3
+## ch2  - S3
 
 aws s3 commands
 
 - aws s3 cp localuri S3uri=> uploading
 - aws s3 rm s3fileuri => removing
 - aws s3 rm s3bucketuri --recursive => remove all files in bucket
-- aws s3 rb s3bucketuri => removing bucket **bucket need to be empty to delete
+- aws s3 rb s3bucketuri => removing bucket **bucket need to be empty to delete**
 
+aws s3api commands
 - aws s3api create-bucket --bucket bucket-name --region bucket-region => creating bucket in specific region
 - aws s3api list-buckets ==> listing
 - aws s3api list-buckets --query Buckets[].Name => query in s3
