@@ -30,6 +30,7 @@ aws s3 commands
 - aws s3 rm s3fileuri => removing
 - aws s3 rm s3bucketuri --recursive => remove all files in bucket
 - aws s3 rb s3bucketuri => removing bucket **bucket need to be empty to delete**
+- aws sync folder/ s3bucketuri => uploading all files
 
 aws s3api commands
 - aws s3api create-bucket --bucket bucket-name --region bucket-region => creating bucket in specific region
