@@ -1,8 +1,10 @@
 # AWS learning
-[reference aws cli](https://awscli.amazonaws.com/v2/documentation/api/latest/index.html)
-[querying reference](https://docs.aws.amazon.com/cli/v1/userguide/cli-usage-filter.html#cli-usage-filter-resources)
-[JMES path](https://jmespath.org/)
-[JMES path doc](https://jmespath.org/specification.html#id20)
+
+## Reference
+[reference aws cli](https://awscli.amazonaws.com/v2/documentation/api/latest/index.html)  
+[querying reference](https://docs.aws.amazon.com/cli/v1/userguide/cli-usage-filter.html#cli-usage-filter-resources)  
+[JMES path](https://jmespath.org/)  
+[JMES path doc](https://jmespath.org/specification.html#id20)  
 
 ## ch1 - gitpod
 
