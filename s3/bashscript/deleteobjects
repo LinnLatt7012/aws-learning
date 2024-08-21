@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "=== list objects ==="
+echo "=== delete objects ==="
 
 if [ -z "$1" ]; then
     echo "there need bucket name. eg. ./bucket  bucketname"
@@ -13,4 +13,6 @@ echo $BUCKET_NAME
 aws s3api list-objects \
 --bucket $BUCKET_NAME \
 --query Contents[].Key \
---output json
+|jq -n '{Objects:[inputs | .[] | {Key: .}]}' > /tmp/delete.json
+
+aws s3api delete-objects --bucket $BUCKET_NAME --delete file:///tmp/delete.json

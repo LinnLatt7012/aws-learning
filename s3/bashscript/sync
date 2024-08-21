@@ -1,5 +1,5 @@
 #!/bin/bash
-
+echo "==sync=="
 if [ -z "$1" ]; then
     echo "there need bucket name. eg. ./bucket  bucketname"
     exit -1
