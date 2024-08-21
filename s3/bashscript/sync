@@ -1,0 +1,36 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "there need bucket name. eg. ./bucket  bucketname"
+    exit -1
+fi
+
+BUCKET_NAME=$1
+
+# Specify the directory where the files should be created
+TARGET_DIR="/tmp/out"
+ 
+rm -r $TARGET_DIR
+# Create the directory if it doesn't exist
+mkdir -p "$TARGET_DIR"
+
+for i in {1..5}; do
+    # Generate a random file name using the `RANDOM` variable
+    filename="$TARGET_DIR/file_$RANDOM.txt"
+
+    # Create the file
+    touch "$filename"
+
+    # Generate random content and write it to the file
+    # Method 1: Using `/dev/urandom`
+    head -c 100 /dev/urandom | base64 > "$filename"
+    
+    # Method 2: Using `shuf` to generate random words (if you prefer text)
+    # shuf -n 10 /usr/share/dict/words > "$filename"
+
+    # Print the name of the created file
+    echo "Created file: $filename with random content"
+done
+
+
+aws s3 sync $TARGET_DIR s3://$BUCKET_NAME/files

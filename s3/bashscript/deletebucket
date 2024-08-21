@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "=== create bucket ==="
+echo "=== delete bucket ==="
 
 if [ -z "$1" ]; then
     echo "there need bucket name. eg. ./bucket  bucketname"

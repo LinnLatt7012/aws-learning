@@ -10,7 +10,8 @@ fi
 BUCKET_NAME=$1
 echo $BUCKET_NAME
 # https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3api/create-bucket.html
-aws s3api create-bucket --bucket $BUCKET_NAME \
+aws s3api create-bucket \
+--bucket $BUCKET_NAME \
 --create-bucket-configuration="LocationConstraint=eu-north-1" \
 --query Location \
 --output text
