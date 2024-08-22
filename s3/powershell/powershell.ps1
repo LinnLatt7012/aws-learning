@@ -21,8 +21,8 @@ if (-not (BucketExists)){
   
 # Create a new file
 
-$fileName = 'myfile.txt'
+$filePath = '/tmp/myfile.txt'
 $fileContent = 'Hello World!'
-Set-Content -Path $fileName -Value $fileContent
+Set-Content -Path $filePath -Value $fileContent
 
-Write-S3Object -BucketName $bucketName -File $fileName -Key $fileName
+Write-S3Object -BucketName $bucketName -File $filePath -Key (Get-ChildItem $filePath).Name
