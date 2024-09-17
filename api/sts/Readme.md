@@ -52,8 +52,9 @@ aws iam put-user-policy \
 
 ```sh
 aws sts assume-role \
---role-arn arn:aws:iam::982383527471:role/my-sts-fun-stack-StsRole-UBQlCIzagA7n \
+--role-arn arn:aws:iam::861276108927:role/my-sts-fun-stack-StsRole-Sxlm4bwfqcS5 \
 --role-session-name s3-sts-fun \
+--duration-seconds 43200 \
 --profile sts
 ```
 
@@ -63,8 +64,8 @@ aws sts get-caller-identity --profile assumed
 
 ```sh
 aws s3 ls --profile assumed
-```
 
+(END)
 ## Cleanup
 
 tear down your cloudformation stack via the AWS Managemnet Console
