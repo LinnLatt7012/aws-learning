@@ -6,8 +6,8 @@
 	"image": "mcr.microsoft.com/devcontainers/universal:2-linux",
 	"features": {
 		"ghcr.io/devcontainers/features/aws-cli:1": {}
-	}
-
+	},
+	"postCreateCommand": "wget https://github.com/mikefarah/yq/releases/download/v4.30.6/yq_linux_amd64 -O /usr/local/bin/yq && chmod +x /usr/local/bin/yq"
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 
